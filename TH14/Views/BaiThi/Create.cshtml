@@ -1,0 +1,34 @@
+﻿@model TH14.Models.Sach
+
+<h3>Create</h3>
+<div class="container mt-3">
+    <div class="row">
+        <div class="col col-md-6">
+            <form asp-action="Create" methos="post">
+                <div class="form-group" mb-3>
+                    <select asp-for="MaTl" asp-items="ViewBag.MaTl">
+                        <option value="">Chon Tat Ca</option>
+                    </select>
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="TenSach" class="control-label">TenSach</label>
+                    <input asp-for="TenSach" class="form-control" placeholder="Nhap Ten Sach"/>
+                    <span asp-validation-for="TenSach" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="Gia" class="control-label">Gia</label>
+                    <input asp-for="Gia" class="form-control" placeholder="Nhap Gia Sach" />
+                    <span asp-validation-for="Gia" class="text-danger"></span>
+                </div>
+                <div class="form-group mb-3">
+                    <label asp-for="Anh" class="control-label">Anh</label>
+                    <input asp-for="Anh" class="form-control" placeholder="Nhap Anh Sach" />
+                    <span asp-validation-for="Anh" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Create</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+﻿@model IEnumerable<TH14.Models.Sach>
+@foreach (var i in Model)
+{
+    <div class="book-card">
+        <a href="#"><img src="~/images/@i.Anh" alt="" /></a>
+        <h2>@i.TenSach</h2>
+        <div class="book-foot"><span class="price">@i.Gia</span><button class="btn-buy">Thêm vào giỏ</button></div>
+    </div>
+}
