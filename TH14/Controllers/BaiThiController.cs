@@ -16,7 +16,6 @@ namespace TH14.Controllers
 
         public IActionResult Index()
         {
-            // Thêm điều kiện x.Gia != null để tránh lỗi khi so sánh dữ liệu Null trong C# / EF
             saches = db.Saches.Where(x => x.Gia != null && x.Gia >= 100).ToList();
             return View(saches);
         }
